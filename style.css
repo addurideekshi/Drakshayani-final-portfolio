@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #0d1b2a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+a { text-decoration: none; }
+
+/* Navbar */
+header {
+  background-color: #000;
+  padding: 15px 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: lavender;
+  /* or white */
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  background-color: lavender;
+  color: black;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+  background: #1b263b;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  color: lavender;
+}
+
+.hero-text h2 {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: lavender;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero-img img {
+  width: 250px;
+  border-radius: 50%;
+  border: 5px solid lavender;
+}
+
+/* Sections */
+section {
+  padding: 50px 30px;
+}
+
+section h2 {
+  font-size: 28px;
+  color: lavender;
+  margin-bottom: 20px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Unified nav + button styles for consistent look */
+.navbar .nav-links a,
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background: lavender;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.navbar .nav-links a:hover,
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Unified "view" button used across certs/projects/pubs/experience */
+.view-btn,
+.pdf-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover,
+.pdf-link:hover {
+  background-color: #005bb5;
+}
+
+/* Highlight current page link */
+.navbar .nav-links a.active,
+.navbar .nav-links a[aria-current="page"] {
+  background: #fff;
+  color: #000;
+}
+
+/* === Qualification (Education) list === */
+#qualification {
+  padding: 30px;
+}
+
+#qualification h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.edu-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  /* keeps images from stretching */
+  border-radius: 8px;
+  /* rounded corners */
+  flex-shrink: 0;
+  /* prevents image from squishing */
+}
+
+.edu-item p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* === Common View Certificate / View Paper / View Project Button === */
+.view-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #005bb5;
+}
+
+/* === Experience Section === */
+.exp-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.exp-item p {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* === Projects Section === */
+.project-item {
+  margin: 20px 0;
+}
+
+.project-item p {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-item ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* === Certifications Section === */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.cert-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.cert-item p {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.cert-item a.pdf-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cert-item a.pdf-link:hover {
+  background-color: #005bb5;
+}
+
+/* === Publications Section === */
+.pub-item {
+  margin: 12px 0;
+}
+
+.pub-item p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Skills Section */
+#skills {
+  padding: 30px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 per row */
+  gap: 25px;
+  margin-top: 20px;
+  justify-items: center;
+  /* center each block */
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  /* logo + name side by side */
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  background: rgba(245, 245, 245, 0.95);
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 220px;
+  /* fixed block size */
+  height: 70px;
+  /* balanced height */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Contact Section Styling */
+.contact {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #5e00f5;
+  /* Gold accent */
+}
+
+.contact p {
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact img {
+  vertical-align: middle;
+  margin-right: 8px;
+  max-width: 28px;
+  height: auto;
+}
+
+.contact a {
+  color: #5e00f5;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Styling */
+form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+form label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  background: #5e00f5;
+  color: #111;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: lavender;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ==== Reveal animation ==== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 200px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
