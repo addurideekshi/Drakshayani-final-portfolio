@@ -18,7 +18,19 @@
   tick();
 })();
 
-/* === 4) Highlight the current page in the nav === */
+/* === 2) Hamburger menu toggle for mobile === */
+(function setupNavToggle() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+})();
+
+/* === 3) Highlight the current page in the nav === */
 (function setActiveNav() {
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {

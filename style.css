@@ -11,7 +11,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
 /* Navbar */
 header {
@@ -437,19 +439,48 @@ footer {
   transform: none;
 }
 
+
+/* Add this new section for the hamburger icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
+  .navbar .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
-  }
-
-  .hero-img img {
-    width: 200px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
   }
 }
