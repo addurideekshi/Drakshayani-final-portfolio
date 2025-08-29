@@ -456,10 +456,14 @@ footer {
 }
 
 /* ==== Responsive ==== */
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
   .navbar .nav-links {
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 0;
     width: 100%;
     background-color: #000;
@@ -480,7 +484,7 @@ footer {
   }
 
   .hero {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
   }
 }
