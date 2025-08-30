@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #0d1b2a;
   color: white;
@@ -31,7 +30,6 @@ header {
   font-size: 24px;
   font-weight: bold;
   color: lavender;
-  /* or white */
 }
 
 .navbar .nav-links {
@@ -114,25 +112,6 @@ ul {
   margin-left: 20px;
 }
 
-/* Unified nav + button styles for consistent look */
-.navbar .nav-links a,
-.btn {
-  display: inline-block;
-  padding: 8px 15px;
-  border-radius: 4px;
-  background: lavender;
-  color: black;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.navbar .nav-links a:hover,
-.btn:hover {
-  background: #fff;
-  color: #000;
-}
-
 /* Unified "view" button used across certs/projects/pubs/experience */
 .view-btn,
 .pdf-link {
@@ -179,33 +158,14 @@ ul {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  /* keeps images from stretching */
   border-radius: 8px;
-  /* rounded corners */
   flex-shrink: 0;
-  /* prevents image from squishing */
 }
 
 .edu-item p {
   margin: 0;
   line-height: 1.5;
   font-size: 1rem;
-}
-
-/* === Common View Certificate / View Paper / View Project Button === */
-.view-btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background-color: #0073e6;
-  color: #fff;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.view-btn:hover {
-  background-color: #005bb5;
 }
 
 /* === Experience Section === */
@@ -296,17 +256,14 @@ ul {
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 per row */
   gap: 25px;
   margin-top: 20px;
   justify-items: center;
-  /* center each block */
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  /* logo + name side by side */
   gap: 12px;
   font-size: 18px;
   font-weight: 500;
@@ -315,9 +272,7 @@ ul {
   padding: 15px 20px;
   border-radius: 10px;
   width: 220px;
-  /* fixed block size */
   height: 70px;
-  /* balanced height */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -348,7 +303,6 @@ ul {
   font-size: 28px;
   margin-bottom: 15px;
   color: #5e00f5;
-  /* Gold accent */
 }
 
 .contact p {
@@ -396,11 +350,8 @@ textarea {
   border-radius: 8px;
   font-size: 16px;
   outline: none;
-}
-
-textarea {
-  height: 120px;
-  resize: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 button {
@@ -439,12 +390,13 @@ footer {
   transform: none;
 }
 
-
 /* Add this new section for the hamburger icon */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001;
+  /* ensures it's on top */
 }
 
 .menu-toggle .bar {
@@ -461,6 +413,8 @@ html {
 }
 
 @media (max-width: 768px) {
+
+  /* Navbar adjustments */
   .navbar .nav-links {
     position: absolute;
     top: 80%;
@@ -483,8 +437,92 @@ html {
     display: flex;
   }
 
+  /* Hero section adjustments */
   .hero {
-    flex-direction: row;
+    flex-direction: column-reverse;
+    /* Puts image first */
     text-align: center;
+    padding: 30px 15px;
+  }
+
+  .hero-img {
+    margin-bottom: 20px;
+  }
+
+  .hero-img img {
+    width: 180px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h2 {
+    font-size: 16px;
+  }
+
+  /* General section adjustments */
+  section {
+    padding: 30px 15px;
+  }
+
+  section h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Skills section adjustments */
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-item {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  /* List item adjustments (qualification, experience, certs) */
+  .edu-item,
+  .exp-item,
+  .cert-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .edu-item img,
+  .cert-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .project-item {
+    text-align: center;
+  }
+
+  .project-item ul {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .pub-item {
+    text-align: center;
+  }
+
+  /* Contact form adjustments */
+  .contact {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  form label,
+  form input,
+  form textarea,
+  form button {
+    font-size: 14px;
   }
 }
