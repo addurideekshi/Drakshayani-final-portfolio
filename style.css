@@ -443,6 +443,15 @@ footer {
     display: flex;
   }
 
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: transparent;
+    /* This line makes the bars transparent */
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
   .hero {
     flex-direction: column-reverse;
     text-align: center;
