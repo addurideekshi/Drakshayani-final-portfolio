@@ -439,18 +439,8 @@ footer {
     display: flex;
   }
 
-  #menu-toggle {
-  display: flex;
-
   .menu-toggle {
     display: flex;
-  }
-
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    margin: 4px 0;
-    transition: 0.4s;
   }
 
   .hero {
